@@ -15,6 +15,7 @@
         app:cardCornerRadius="25dp">
 
         <ImageView
+            android:id="@+id/imgProfileCI"
             android:layout_width="45dp"
             android:layout_height="45dp"
             android:src="@color/colorAccent" />
@@ -29,24 +30,27 @@
 
         <!--        person name-->
         <TextView
+            android:id="@+id/tvNameCI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:textColor="@color/text"
             android:text="@string/person_name"
+            android:textColor="@color/text"
             android:textSize="18sp" />
 
         <!--        last message-->
         <TextView
+            android:id="@+id/tvLastMessageCI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
             android:layout_marginTop="5dp"
-            android:textColor="@color/text"
             android:text="@string/message"
+            android:textColor="@color/text"
             android:textSize="14sp" />
 
         <!--        time-->
         <TextView
+            android:id="@+id/tvLastSeenCI"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
