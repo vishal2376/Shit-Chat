@@ -9,10 +9,10 @@
     <color name="white">#FFFFFFFF</color>
 
 
-    <color name="primary">#F4EEFF</color>
-    <color name="primaryDark">#DCD6F7</color>
-    <color name="secondary">#A6B1E1</color>
-    <color name="colorAccent">#424874</color>
+    <color name="primary">#393E46</color>
+    <color name="primaryDark">#222222</color>
+    <color name="colorAccent">#F2A365</color>
+    <color name="text">#ECECEC</color>
 
 
 </resources>
