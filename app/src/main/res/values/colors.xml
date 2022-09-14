@@ -13,6 +13,7 @@
     <color name="primaryDark">#222222</color>
     <color name="colorAccent">#F2A365</color>
     <color name="text">#ECECEC</color>
+    <color name="textLight">#C5C5C5</color>
 
 
 </resources>
