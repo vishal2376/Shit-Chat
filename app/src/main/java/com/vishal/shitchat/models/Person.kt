@@ -1,4 +1,4 @@
-package com.vishal.shitchat
+package com.vishal.shitchat.models
 
 data class Person(
     val name:String,

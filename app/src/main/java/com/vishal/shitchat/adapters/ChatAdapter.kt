@@ -5,7 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.vishal.shitchat.Person
+import com.vishal.shitchat.models.Person
 import com.vishal.shitchat.R
 import kotlinx.android.synthetic.main.chat_item.view.*
 
