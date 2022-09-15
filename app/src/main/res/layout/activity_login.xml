@@ -6,7 +6,7 @@
     android:background="@color/primaryDark"
     android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:paddingHorizontal="20dp"
+    android:paddingHorizontal="35dp"
     tools:context=".LoginActivity">
 
     <TextView
@@ -22,7 +22,7 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:scaleType="centerCrop"
         android:src="@drawable/people" />
 
@@ -32,10 +32,12 @@
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
         android:layout_marginTop="20dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
+        android:background="@drawable/edit_box"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
@@ -45,13 +47,25 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:paddingHorizontal="15dp"
         android:layout_marginTop="30dp"
         android:hint="@string/password"
         android:inputType="textPassword"
+        android:background="@drawable/edit_box"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
+
+     <CheckBox
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:text="Remember Me"
+         android:layout_gravity="start"
+         android:layout_marginTop="20dp"
+         android:textColor="@color/text"
+         android:textSize="15sp"/>
+
 
     <!--    login button-->
     <Button
@@ -59,12 +73,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/spline"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
-        android:text="@string/login"
-        android:textSize="16sp" />
+        android:text="@string/login" />
 
     <!--    horizontal line-->
     <LinearLayout
