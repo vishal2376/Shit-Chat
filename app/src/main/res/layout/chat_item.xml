@@ -37,7 +37,7 @@
             android:text="@string/person_name"
             android:fontFamily="@font/open_sans"
             android:textColor="@color/text"
-            android:textSize="18sp" />
+            android:textSize="19sp" />
 
         <!--        last message-->
         <TextView
@@ -48,7 +48,7 @@
             android:fontFamily="@font/open_sans"
             android:text="@string/message"
             android:textColor="@color/textLight"
-            android:textSize="12sp" />
+            android:textSize="13sp" />
 
         <!--        time-->
         <TextView
@@ -57,10 +57,10 @@
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
             android:layout_marginTop="5dp"
-            android:text="@string/time"
             android:fontFamily="@font/spline"
+            android:text="@string/time"
             android:textColor="@color/textLight"
-            android:textSize="12sp" />
+            android:textSize="11sp" />
 
 
         <!--       badge/tick status-->
