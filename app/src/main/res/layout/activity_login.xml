@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/primaryDark"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    android:paddingHorizontal="20dp"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="left"
+        android:fontFamily="@font/open_sans"
+        android:text="@string/login"
+        android:textColor="@color/text"
+        android:textSize="30sp" />
+
+    <ImageView
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/people"
+        android:layout_marginTop="30dp"/>
+
+
+    <!--    email-->
+    <EditText
+        android:id="@+id/etEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="15dp"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textLight"
+        android:textSize="18sp" />
+
+    <!--    password-->
+    <EditText
+        android:id="@+id/etPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:layout_marginHorizontal="15dp"
+        android:inputType="textPassword"
+        android:hint="@string/password"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textLight"
+        android:textSize="18sp" />
+
+    <!--    login button-->
+    <Button
+        android:id="@+id/btnLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:fontFamily="@font/spline"
+        android:paddingHorizontal="30dp"
+        android:paddingVertical="10dp"
+        android:text="@string/login"
+        android:textSize="16sp" />
+
+    <!--    horizontal line-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center">
+
+
+        <View
+            android:layout_width="120dp"
+
+            android:layout_height="1dp"
+            android:background="@color/primary" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:fontFamily="@font/spline"
+            android:text="OR"
+            android:textColor="@color/textLight"
+            android:textSize="20sp" />
+
+
+        <View
+            android:layout_width="120dp"
+            android:layout_height="1dp"
+            android:background="@color/primary" />
+
+    </LinearLayout>
+
+    <!--    google sign in button-->
+
+    <LinearLayout
+        android:id="@+id/btnGoogleLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="60dp"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/round_box"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/google_logo" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/login_with_google"
+            android:textColor="@color/black"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>
