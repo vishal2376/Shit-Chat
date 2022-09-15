@@ -1,6 +1,8 @@
 package com.vishal.shitchat
 
 import android.os.Bundle
+import android.view.animation.AnimationUtils
+import android.view.animation.LayoutAnimationController
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.vishal.shitchat.adapters.ChatAdapter
@@ -39,5 +41,11 @@ class MainActivity : AppCompatActivity() {
 
         rvChatList.layoutManager = LinearLayoutManager(this)
         rvChatList.adapter = ChatAdapter(this, tempData)
+
+        //layout animation added
+        val chatListAnimation = LayoutAnimationController(AnimationUtils.loadAnimation(this,R.anim.slide_up))
+        chatListAnimation.delay = 0.06f
+        chatListAnimation.order = LayoutAnimationController.ORDER_NORMAL
+        rvChatList.layoutAnimation = chatListAnimation
     }
 }
