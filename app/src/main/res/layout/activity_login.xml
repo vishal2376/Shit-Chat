@@ -4,16 +4,16 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryDark"
-    android:orientation="vertical"
     android:gravity="center_horizontal"
+    android:orientation="vertical"
     android:paddingHorizontal="20dp"
     tools:context=".LoginActivity">
 
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_gravity="left"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
         android:text="@string/login"
         android:textColor="@color/text"
@@ -22,9 +22,9 @@
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
+        android:layout_marginTop="30dp"
         android:scaleType="centerCrop"
-        android:src="@drawable/people"
-        android:layout_marginTop="30dp"/>
+        android:src="@drawable/people" />
 
 
     <!--    email-->
@@ -32,8 +32,8 @@
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
         android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="20dp"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
         android:textColor="@color/text"
@@ -45,10 +45,10 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
         android:layout_marginHorizontal="15dp"
-        android:inputType="textPassword"
+        android:layout_marginTop="30dp"
         android:hint="@string/password"
+        android:inputType="textPassword"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
