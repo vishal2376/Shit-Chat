@@ -15,11 +15,19 @@ class LoginActivity : AppCompatActivity() {
         btnLogin.setOnClickListener {
             val i = Intent(this,MainActivity::class.java)
             startActivity(i)
+            finish()
         }
 
         //google login button
         btnGoogleLogin.setOnClickListener {
             Toast.makeText(this,"No implemented",Toast.LENGTH_SHORT).show()
+        }
+
+        //sign up button
+        tvSignUp.setOnClickListener {
+            val i = Intent(this,SignUpActivity::class.java)
+            startActivity(i)
+            finish()
         }
     }
 }
