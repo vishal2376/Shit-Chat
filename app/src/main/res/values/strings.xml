@@ -7,4 +7,8 @@
     <string name="email">Email</string>
     <string name="login">Login</string>
     <string name="login_with_google">Login with Google</string>
+    <string name="name">Name</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="already_haven_an_account">Already haven an account ?</string>
+    <string name="sign_up_with_google">Sign Up with Google</string>
 </resources>

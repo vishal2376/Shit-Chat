@@ -7,18 +7,20 @@
     android:gravity="center_horizontal"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
-    tools:context=".LoginActivity">
+    tools:context=".SignUpActivity">
 
+    <!--    sign up text-->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
-        android:text="@string/login"
+        android:text="@string/sign_up"
         android:textColor="@color/text"
         android:textSize="30sp" />
 
+    <!--    vector image-->
     <ImageView
         android:layout_width="300dp"
         android:layout_height="200dp"
@@ -26,18 +28,32 @@
         android:scaleType="centerCrop"
         android:src="@drawable/people" />
 
+    <!--name-->
+    <EditText
+        android:id="@+id/etName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/edit_box"
+        android:hint="@string/name"
+        android:inputType="textPersonName"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
+        android:textColor="@color/text"
+        android:textColorHint="@color/textLight"
+        android:textSize="18sp" />
 
     <!--    email-->
     <EditText
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="15dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/edit_box"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:background="@drawable/edit_box"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
@@ -47,49 +63,39 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="15dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/edit_box"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:background="@drawable/edit_box"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
 
-     <CheckBox
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="Remember Me"
-         android:layout_gravity="start"
-         android:layout_marginTop="20dp"
-         android:textColor="@color/text"
-         android:textSize="15sp"/>
 
-
-    <!--    login button-->
+    <!--    sign up button-->
     <Button
         android:id="@+id/btnLogin"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:fontFamily="@font/spline"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
-        android:text="@string/login" />
+        android:text="@string/sign_up" />
 
     <!--    horizontal line-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:gravity="center">
 
 
         <View
             android:layout_width="120dp"
-
             android:layout_height="1dp"
             android:background="@color/primary" />
 
@@ -111,14 +117,13 @@
 
     </LinearLayout>
 
-    <!--    google sign in button-->
-
+    <!--    google sign un button-->
     <LinearLayout
-        android:id="@+id/btnGoogleLogin"
+        android:id="@+id/btnGoogleSignUp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp">
@@ -132,9 +137,38 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="15dp"
-            android:text="@string/login_with_google"
+            android:text="@string/sign_up_with_google"
             android:textColor="@color/black"
             android:textSize="15sp" />
     </LinearLayout>
+
+
+    <!--    login message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/already_haven_an_account"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="@string/login"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </LinearLayout>
+
 
 </LinearLayout>
