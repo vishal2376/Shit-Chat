@@ -12,7 +12,9 @@
     <color name="primary">#393E46</color>
     <color name="primaryDark">#222222</color>
     <color name="colorAccent">#F2A365</color>
+    <color name="colorAccentBlue">#5FC5FF</color>
     <color name="text">#ECECEC</color>
+    <color name="textRed">#983D1D</color>
     <color name="textLight">#C5C5C5</color>
 
 

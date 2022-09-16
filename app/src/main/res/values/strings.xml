@@ -11,4 +11,6 @@
     <string name="sign_up">Sign Up</string>
     <string name="already_haven_an_account">Already haven an account ?</string>
     <string name="sign_up_with_google">Sign Up with Google</string>
+    <string name="dont_have_an_account">Don\'t have an account ?</string>
+    <string name="forgot_password">Forgot Password ?</string>
 </resources>

@@ -32,12 +32,12 @@
         android:id="@+id/etEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="15dp"
         android:layout_marginTop="20dp"
+        android:background="@drawable/edit_box"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
-        android:background="@drawable/edit_box"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
@@ -47,24 +47,39 @@
         android:id="@+id/etPassword"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingVertical="10dp"
-        android:paddingHorizontal="15dp"
         android:layout_marginTop="30dp"
+        android:background="@drawable/edit_box"
         android:hint="@string/password"
         android:inputType="textPassword"
-        android:background="@drawable/edit_box"
+        android:paddingHorizontal="15dp"
+        android:paddingVertical="10dp"
         android:textColor="@color/text"
         android:textColorHint="@color/textLight"
         android:textSize="18sp" />
 
-     <CheckBox
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:text="Remember Me"
-         android:layout_gravity="start"
-         android:layout_marginTop="20dp"
-         android:textColor="@color/text"
-         android:textSize="15sp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center">
+
+
+        <CheckBox
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:text="Remember Me"
+            android:textColor="@color/text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/forgot_password"
+            android:textColor="@color/colorAccentBlue"
+            android:textSize="16sp" />
+
+    </LinearLayout>
 
 
     <!--    login button-->
@@ -79,11 +94,12 @@
         android:paddingVertical="10dp"
         android:text="@string/login" />
 
+
     <!--    horizontal line-->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="30dp"
         android:gravity="center">
 
 
@@ -112,13 +128,12 @@
     </LinearLayout>
 
     <!--    google sign in button-->
-
     <LinearLayout
         android:id="@+id/btnGoogleLogin"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp">
@@ -136,5 +151,34 @@
             android:textColor="@color/black"
             android:textSize="15sp" />
     </LinearLayout>
+
+
+    <!--    sign up message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/dont_have_an_account"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </LinearLayout>
+
 
 </LinearLayout>
