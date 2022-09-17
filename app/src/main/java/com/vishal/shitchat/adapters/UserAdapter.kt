@@ -5,11 +5,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.vishal.shitchat.models.Person
+import com.vishal.shitchat.models.User
 import com.vishal.shitchat.R
 import kotlinx.android.synthetic.main.chat_item.view.*
 
-class ChatAdapter(private val context: Context, private val personList: ArrayList<Person>) : RecyclerView.Adapter<ChatAdapter.ChatViewHolder>() {
+class UserAdapter(private val context: Context, private val userList: ArrayList<User>) : RecyclerView.Adapter<UserAdapter.ChatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.chat_item,parent,false)
@@ -17,15 +17,15 @@ class ChatAdapter(private val context: Context, private val personList: ArrayLis
     }
 
     override fun onBindViewHolder(holder: ChatViewHolder, position: Int) {
-        holder.nameCA.text = personList[position].name
-        holder.lastMessageCA.text = personList[position].lastMessage
-        holder.lastSeenCA.text = personList[position].lastSeen
+        holder.nameCA.text = userList[position].name
+        holder.lastMessageCA.text = userList[position].lastMessage
+        holder.lastSeenCA.text = userList[position].lastSeen
 
         //load profile image using Glide
     }
 
     override fun getItemCount(): Int {
-        return personList.size
+        return userList.size
     }
 
 

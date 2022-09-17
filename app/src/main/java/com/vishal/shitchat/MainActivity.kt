@@ -5,8 +5,8 @@ import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.vishal.shitchat.adapters.ChatAdapter
-import com.vishal.shitchat.models.Person
+import com.vishal.shitchat.adapters.UserAdapter
+import com.vishal.shitchat.models.User
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -22,25 +22,25 @@ class MainActivity : AppCompatActivity() {
     private fun setRecyclerMA() {
 
         //temp data for testing
-        val tempData: ArrayList<Person> = ArrayList()
-        tempData.add(Person("Manik", "Join the world's best online", "08:10 PM", ""))
-        tempData.add(Person("Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
-        tempData.add(Person("Unknown", "Build products, practice skills", "08:40 PM", ""))
-        tempData.add(Person("Bhatia", "and in-person hackathons", "01:20 AM", ""))
-        tempData.add(Person("Manik", "Showing 7304 hackathons", "03:13 PM", ""))
-        tempData.add(Person("Mani", "just use pan and paper", "04:10 AM", ""))
-        tempData.add(Person("Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
-        tempData.add(Person("Unknown", "Build products, practice skills", "08:40 PM", ""))
-        tempData.add(Person("Bhatia", "and in-person hackathons", "01:20 AM", ""))
-        tempData.add(Person("Unknown", "Build products, practice skills", "08:40 PM", ""))
-        tempData.add(Person("Bhatia", "and in-person hackathons", "01:20 AM", ""))
-        tempData.add(Person("Manik", "Showing 7304 hackathons", "03:13 PM", ""))
-        tempData.add(Person("Mani", "just use pan and paper", "04:10 AM", ""))
-        tempData.add(Person("Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
+        val tempData: ArrayList<User> = ArrayList()
+        tempData.add(User("123","Manik", "Join the world's best online", "08:10 PM", ""))
+        tempData.add(User("123","Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
+        tempData.add(User("123","Unknown", "Build products, practice skills", "08:40 PM", ""))
+        tempData.add(User("123","Bhatia", "and in-person hackathons", "01:20 AM", ""))
+        tempData.add(User("123","Manik", "Showing 7304 hackathons", "03:13 PM", ""))
+        tempData.add(User("123","Mani", "just use pan and paper", "04:10 AM", ""))
+        tempData.add(User("123","Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
+        tempData.add(User("123","Unknown", "Build products, practice skills", "08:40 PM", ""))
+        tempData.add(User("123","Bhatia", "and in-person hackathons", "01:20 AM", ""))
+        tempData.add(User("123","Unknown", "Build products, practice skills", "08:40 PM", ""))
+        tempData.add(User("123","Bhatia", "and in-person hackathons", "01:20 AM", ""))
+        tempData.add(User("123","Manik", "Showing 7304 hackathons", "03:13 PM", ""))
+        tempData.add(User("123","Mani", "just use pan and paper", "04:10 AM", ""))
+        tempData.add(User("123","Anshal", "Learn about basic Data Structure", "10:20 PM", ""))
 
 
         rvChatList.layoutManager = LinearLayoutManager(this)
-        rvChatList.adapter = ChatAdapter(this, tempData)
+        rvChatList.adapter = UserAdapter(this, tempData)
 
         //layout animation added
         val chatListAnimation = LayoutAnimationController(AnimationUtils.loadAnimation(this,R.anim.slide_up))

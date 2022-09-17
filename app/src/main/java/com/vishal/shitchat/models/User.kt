@@ -1,6 +1,7 @@
 package com.vishal.shitchat.models
 
-data class Person(
+data class User(
+    val id:String,
     val name:String,
     val lastMessage:String,
     val lastSeen:String,
