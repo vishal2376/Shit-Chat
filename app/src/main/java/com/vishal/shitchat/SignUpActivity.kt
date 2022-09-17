@@ -13,7 +13,7 @@ import kotlinx.android.synthetic.main.activity_sign_up.*
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
-    private lateinit var dbRef: DatabaseReference
+    private lateinit var dbUserRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -62,10 +62,10 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun addUserToDatabase(uid: String, name: String, email: String) {
-        dbRef = FirebaseDatabase.getInstance().reference
-        val tempUser = User(uid,name,email,"","","")
+        dbUserRef = FirebaseDatabase.getInstance().getReference("user")
+        val tempUser = User(uid,name,email,"Hello","3:00 PM","")
 
         //creating user data
-        dbRef.child("user").child(uid).setValue(tempUser)
+        dbUserRef.child(uid).setValue(tempUser)
     }
 }
