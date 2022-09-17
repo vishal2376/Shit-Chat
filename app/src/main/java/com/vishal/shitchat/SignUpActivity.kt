@@ -2,6 +2,7 @@ package com.vishal.shitchat
 
 import android.content.Intent
 import android.os.Bundle
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_sign_up.*
@@ -37,6 +38,17 @@ class SignUpActivity : AppCompatActivity() {
     }
 
     private fun signUp(name: String, email: String, password: String) {
-
+        auth.createUserWithEmailAndPassword(email, password)
+            .addOnCompleteListener(this) { task ->
+                if (task.isSuccessful) {
+                    val i = Intent(this, MainActivity::class.java)
+                    startActivity(i)
+                } else {
+                    Toast.makeText(
+                        baseContext, "Authentication failed.",
+                        Toast.LENGTH_SHORT
+                    ).show()
+                }
+            }
     }
 }
