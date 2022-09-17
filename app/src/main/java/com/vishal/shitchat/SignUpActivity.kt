@@ -5,11 +5,15 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
+import com.vishal.shitchat.models.User
 import kotlinx.android.synthetic.main.activity_sign_up.*
 
 class SignUpActivity : AppCompatActivity() {
 
     private lateinit var auth: FirebaseAuth
+    private lateinit var dbRef: DatabaseReference
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,6 +45,11 @@ class SignUpActivity : AppCompatActivity() {
         auth.createUserWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+
+                    //add user to chat database
+                    addUserToDatabase(auth.uid!!,name,email)
+
+                    //move to chat room
                     val i = Intent(this, MainActivity::class.java)
                     startActivity(i)
                 } else {
@@ -50,5 +59,13 @@ class SignUpActivity : AppCompatActivity() {
                     ).show()
                 }
             }
+    }
+
+    private fun addUserToDatabase(uid: String, name: String, email: String) {
+        dbRef = FirebaseDatabase.getInstance().reference
+        val tempUser = User(uid,name,email,"","","")
+
+        //creating user data
+        dbRef.child("user").child(uid).setValue(tempUser)
     }
 }

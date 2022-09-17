@@ -7,12 +7,12 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.vishal.shitchat.models.User
 import com.vishal.shitchat.R
-import kotlinx.android.synthetic.main.chat_item.view.*
+import kotlinx.android.synthetic.main.user_item.view.*
 
 class UserAdapter(private val context: Context, private val userList: ArrayList<User>) : RecyclerView.Adapter<UserAdapter.ChatViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ChatViewHolder {
-        val view = LayoutInflater.from(context).inflate(R.layout.chat_item,parent,false)
+        val view = LayoutInflater.from(context).inflate(R.layout.user_item,parent,false)
         return ChatViewHolder(view)
     }
 
