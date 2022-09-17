@@ -47,7 +47,7 @@ class SignUpActivity : AppCompatActivity() {
                 if (task.isSuccessful) {
 
                     //add user to chat database
-                    addUserToDatabase(auth.uid!!,name,email)
+                    addUserToDatabase(auth.uid!!, name, email)
 
                     //move to chat room
                     val i = Intent(this, MainActivity::class.java)
@@ -63,7 +63,7 @@ class SignUpActivity : AppCompatActivity() {
 
     private fun addUserToDatabase(uid: String, name: String, email: String) {
         dbUserRef = FirebaseDatabase.getInstance().getReference("user")
-        val tempUser = User(uid,name,email,"Hello","3:00 PM","")
+        val tempUser = User(uid, name, email, "Hello", "3:00 PM", "")
 
         //creating user data
         dbUserRef.child(uid).setValue(tempUser)
