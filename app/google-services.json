@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "965751020391",
+    "project_id": "shit-chat-d492c",
+    "storage_bucket": "shit-chat-d492c.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:965751020391:android:3fe3012d96a981242f6dc2",
+        "android_client_info": {
+          "package_name": "com.vishal.shitchat"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "965751020391-a120o8nearj5f7ls0fgqqjiveku10vht.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDGpb5mbJScszPrlTI0fOuAoqpRlU83PnY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "965751020391-a120o8nearj5f7ls0fgqqjiveku10vht.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
