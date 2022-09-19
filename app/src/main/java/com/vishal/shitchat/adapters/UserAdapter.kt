@@ -1,10 +1,13 @@
 package com.vishal.shitchat.adapters
 
 import android.content.Context
+import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
+import com.vishal.shitchat.ChatActivity
 import com.vishal.shitchat.models.User
 import com.vishal.shitchat.R
 import kotlinx.android.synthetic.main.user_item.view.*
@@ -22,6 +25,15 @@ class UserAdapter(private val context: Context, private val userList: ArrayList<
         holder.lastSeenCA.text = userList[position].lastSeen
 
         //load profile image using Glide
+
+        //on click
+        holder.itemView.setOnClickListener {
+            val i = Intent(context,ChatActivity::class.java)
+
+            i.putExtra("NAME",userList[position].name)
+            i.putExtra("ID",userList[position].id)
+            context.startActivity(i)
+        }
     }
 
     override fun getItemCount(): Int {
