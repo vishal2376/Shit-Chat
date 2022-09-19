@@ -3,7 +3,6 @@ package com.vishal.shitchat
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.animation.AnimationUtils
 import android.view.animation.LayoutAnimationController
 import androidx.appcompat.app.AppCompatActivity
@@ -59,7 +58,10 @@ class MainActivity : AppCompatActivity() {
                 for (postSnapshot in snapshot.children) {
 
                     val currentUser = postSnapshot.getValue<User>()
-                    userList.add(currentUser!!)
+
+                    //don't add logged in user
+                    if (auth.currentUser?.uid != currentUser?.id)
+                        userList.add(currentUser!!)
                 }
 
                 //update recycler view data
