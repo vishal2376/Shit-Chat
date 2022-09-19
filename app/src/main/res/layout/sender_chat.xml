@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="end"
+    android:layout_marginBottom="10dp">
+
+<!--    message-->
+    <TextView
+        android:id="@+id/tvMessageSC"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:background="@drawable/sender_box"
+        android:fontFamily="@font/open_sans"
+        android:padding="15dp"
+        android:text="@string/message"
+        android:textColor="@color/text"
+        android:textSize="16sp" />
+
+</LinearLayout>
