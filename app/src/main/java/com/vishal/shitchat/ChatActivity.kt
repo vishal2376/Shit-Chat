@@ -68,6 +68,9 @@ class ChatActivity : AppCompatActivity() {
                 }
         }
 
+        //reset input box after send msg
+        etInput.setText("")
+
     }
 
     private fun setLayoutCA() {
