@@ -1,23 +1,27 @@
 package com.vishal.shitchat
 
+import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.getValue
 import com.vishal.shitchat.adapters.MessageAdapter
 import com.vishal.shitchat.models.Message
 import kotlinx.android.synthetic.main.activity_chat.*
-import kotlinx.android.synthetic.main.receiver_chat.*
 
 class ChatActivity : AppCompatActivity() {
 
-    private lateinit var messageList: ArrayList<Message>
-    private lateinit var dbRef: DatabaseReference
+    lateinit var messageList: ArrayList<Message>
+    lateinit var messageAdapter: MessageAdapter
 
-    var senderRoom: String? = null
-    var receiverRoom: String? = null
+    private lateinit var dbChatRef: DatabaseReference
+
+    private var senderRoom: String? = null
+    private var receiverRoom: String? = null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,9 +29,9 @@ class ChatActivity : AppCompatActivity() {
 
         //initialize
         messageList = ArrayList()
-        rvMessageListCA.adapter = MessageAdapter(this, messageList)
-        dbRef = FirebaseDatabase.getInstance().reference
-        val name = intent.getStringExtra("NAME")
+        messageAdapter = MessageAdapter(this, messageList)
+        dbChatRef = FirebaseDatabase.getInstance().getReference("chats")
+
         val receiverID = intent.getStringExtra("ID")
         val senderID = FirebaseAuth.getInstance().currentUser?.uid
 
@@ -37,27 +41,67 @@ class ChatActivity : AppCompatActivity() {
         //set recycler view
         setRecyclerCA()
 
+        //set layout
+        setLayoutCA()
+
+        //load message
+        loadMessages()
+
+        //back button
+        imgBackCA.setOnClickListener {
+            val i= Intent(this,MainActivity::class.java)
+            startActivity(i)
+            finish()
+        }
+
         //send button
         btnSendCA.setOnClickListener {
 
             //add message to database
-            val message = etInput.text.toString()
-            val messageObj = Message(message, senderID!!)
+            val msg = etInput.text.toString()
+            val messageObj = Message(senderID!!, msg)
 
-            dbRef.child("chats").child(senderRoom!!).child("messages").push()
+            dbChatRef.child(senderRoom!!).child("messages").push()
                 .setValue(messageObj).addOnSuccessListener {
-                    dbRef.child("chats").child(receiverRoom!!).child("messages").push()
+                    dbChatRef.child(receiverRoom!!).child("messages").push()
                         .setValue(messageObj)
                 }
         }
 
     }
 
+    private fun setLayoutCA() {
+        //set name
+        val name = intent.getStringExtra("NAME")
+        tvNameCA.text = name
+    }
+
+    private fun loadMessages() {
+        dbChatRef.child(senderRoom!!).child("messages").addValueEventListener(
+            object : ValueEventListener {
+                @SuppressLint("NotifyDataSetChanged")
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    messageList.clear()
+
+                    for (dataSnapshot in snapshot.children) {
+                        val msg = dataSnapshot.getValue<Message>()
+                        messageList.add(msg!!)
+                    }
+
+                    messageAdapter.notifyDataSetChanged()
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    TODO("Not yet implemented")
+                }
+
+            }
+        )
+    }
+
     private fun setRecyclerCA() {
-        val tempMessage: ArrayList<Message> = ArrayList()
-
-        tempMessage.add(Message("123", "hello there"))
-
         rvMessageListCA.layoutManager = LinearLayoutManager(this)
+        rvMessageListCA.adapter = messageAdapter
     }
 }

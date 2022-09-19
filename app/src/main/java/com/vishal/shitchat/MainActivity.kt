@@ -57,6 +57,7 @@ class MainActivity : AppCompatActivity() {
                 userList.clear()
 
                 for (postSnapshot in snapshot.children) {
+
                     val currentUser = postSnapshot.getValue<User>()
                     userList.add(currentUser!!)
                 }

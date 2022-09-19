@@ -32,6 +32,7 @@ class UserAdapter(private val context: Context, private val userList: ArrayList<
 
             i.putExtra("NAME",userList[position].name)
             i.putExtra("ID",userList[position].id)
+
             context.startActivity(i)
         }
     }
