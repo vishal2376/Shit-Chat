@@ -4,7 +4,9 @@
     <option name="filePathToZoomLevelMap">
       <map>
         <entry key="app/src/main/res/drawable/edit_box.xml" value="0.2345" />
+        <entry key="app/src/main/res/drawable/ic_send.xml" value="0.2345" />
         <entry key="app/src/main/res/drawable/round_box.xml" value="0.2345" />
+        <entry key="app/src/main/res/layout/activity_chat.xml" value="0.2907172995780591" />
         <entry key="app/src/main/res/layout/activity_login.xml" value="0.2907172995780591" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.35333333333333333" />
         <entry key="app/src/main/res/layout/activity_sign_up.xml" value="0.2907172995780591" />
