@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryDark"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
     tools:context=".LoginActivity">
@@ -48,7 +48,7 @@
         android:id="@+id/etPasswordLA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
         android:hint="@string/password"
         android:nextFocusDown="@id/btnLogin"
@@ -92,7 +92,7 @@
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/spline"
-        android:paddingHorizontal="30dp"
+        android:paddingHorizontal="20dp"
         android:paddingVertical="10dp"
         android:text="@string/login" />
 
@@ -101,7 +101,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
 
@@ -132,10 +132,9 @@
     <!--    google sign in button-->
     <LinearLayout
         android:id="@+id/btnGoogleLogin"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp">
@@ -159,9 +158,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:padding="10dp">
+        android:layout_marginTop="15dp"
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"

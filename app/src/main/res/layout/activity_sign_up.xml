@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/primaryDark"
-    android:gravity="center_horizontal"
+    android:gravity="center"
     android:orientation="vertical"
     android:paddingHorizontal="35dp"
     tools:context=".SignUpActivity">
@@ -13,7 +13,7 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="start"
+        android:layout_gravity="top"
         android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
         android:text="@string/sign_up"
@@ -49,7 +49,7 @@
         android:id="@+id/etEmailSA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
         android:hint="@string/email"
         android:inputType="textEmailAddress"
@@ -65,7 +65,7 @@
         android:id="@+id/etPasswordSA"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/edit_box"
         android:hint="@string/password"
         android:inputType="textPassword"
@@ -83,7 +83,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:fontFamily="@font/spline"
         android:paddingHorizontal="30dp"
         android:paddingVertical="10dp"
@@ -93,7 +93,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:gravity="center">
 
 
@@ -123,10 +123,9 @@
     <!--    google sign un button-->
     <LinearLayout
         android:id="@+id/btnGoogleSignUp"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginHorizontal="60dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp">
@@ -151,8 +150,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="15dp"
-        android:gravity="center"
-        android:padding="10dp">
+        android:gravity="center">
 
         <TextView
             android:layout_width="wrap_content"
