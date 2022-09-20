@@ -3,7 +3,6 @@ package com.vishal.shitchat
 import android.annotation.SuppressLint
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.google.firebase.auth.FirebaseAuth
@@ -49,7 +48,7 @@ class ChatActivity : AppCompatActivity() {
 
         //back button
         imgBackCA.setOnClickListener {
-            val i= Intent(this,MainActivity::class.java)
+            val i = Intent(this, MainActivity::class.java)
             startActivity(i)
             finish()
         }
@@ -66,10 +65,9 @@ class ChatActivity : AppCompatActivity() {
                     dbChatRef.child(receiverRoom!!).child("messages").push()
                         .setValue(messageObj)
                 }
+            //reset input box after send msg
+            etInput.setText("")
         }
-
-        //reset input box after send msg
-        etInput.setText("")
 
     }
 
