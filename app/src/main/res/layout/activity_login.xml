@@ -13,7 +13,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="start"
-        android:layout_marginTop="20dp"
         android:fontFamily="@font/open_sans"
         android:text="@string/login"
         android:textColor="@color/text"
@@ -126,7 +125,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:gravity="center">
 
 
@@ -159,11 +158,11 @@
         android:id="@+id/btnGoogleLogin"
         android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/round_box"
         android:gravity="center"
         android:padding="10dp"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="30dp">
 
         <ImageView
             android:layout_width="25dp"
