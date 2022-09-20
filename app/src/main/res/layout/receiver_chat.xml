@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     xmlns:tools="http://schemas.android.com/tools"
     android:gravity="start"
-    android:layout_marginBottom="10dp">
+    android:layout_marginBottom="5dp">
 
 <!--    message-->
     <TextView
@@ -12,11 +12,11 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="5dp"
-        android:fontFamily="@font/open_sans"
-        android:padding="15dp"
+        android:fontFamily="@font/roboto"
+        android:padding="10dp"
         android:text="@string/message"
         android:textColor="@color/text"
-        android:textSize="16sp"
+        android:textSize="15sp"
         tools:background="@color/primaryDark" />
 
 </LinearLayout>
