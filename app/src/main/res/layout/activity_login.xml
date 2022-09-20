@@ -96,6 +96,31 @@
         android:paddingVertical="10dp"
         android:text="@string/login" />
 
+        <!--    sign up message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/dont_have_an_account"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvSignUpLA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="@string/sign_up"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </LinearLayout>
 
     <!--    horizontal line-->
     <LinearLayout
@@ -137,7 +162,8 @@
         android:layout_marginTop="20dp"
         android:background="@drawable/round_box"
         android:gravity="center"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:layout_marginBottom="20dp">
 
         <ImageView
             android:layout_width="25dp"
@@ -152,33 +178,5 @@
             android:textColor="@color/black"
             android:textSize="15sp" />
     </LinearLayout>
-
-
-    <!--    sign up message-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="@string/dont_have_an_account"
-            android:textColor="@color/text"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvSignUpLA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:padding="5dp"
-            android:text="@string/sign_up"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
-    </LinearLayout>
-
 
 </LinearLayout>

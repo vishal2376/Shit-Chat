@@ -89,6 +89,33 @@
         android:paddingVertical="10dp"
         android:text="@string/sign_up" />
 
+
+    <!--    login message-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:text="@string/already_haven_an_account"
+            android:textColor="@color/text"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/tvLoginSA"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:padding="5dp"
+            android:text="@string/login"
+            android:textColor="@color/colorAccent"
+            android:textSize="16sp" />
+    </LinearLayout>
+
     <!--    horizontal line-->
     <LinearLayout
         android:layout_width="match_parent"
@@ -142,33 +169,6 @@
             android:text="@string/sign_up_with_google"
             android:textColor="@color/black"
             android:textSize="15sp" />
-    </LinearLayout>
-
-
-    <!--    login message-->
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="15dp"
-        android:gravity="center">
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="15dp"
-            android:text="@string/already_haven_an_account"
-            android:textColor="@color/text"
-            android:textSize="16sp" />
-
-        <TextView
-            android:id="@+id/tvLoginSA"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="5dp"
-            android:padding="5dp"
-            android:text="@string/login"
-            android:textColor="@color/colorAccent"
-            android:textSize="16sp" />
     </LinearLayout>
 
 
