@@ -52,6 +52,7 @@ class SignUpActivity : AppCompatActivity() {
                     //move to chat room
                     val i = Intent(this, MainActivity::class.java)
                     startActivity(i)
+                    finish()
                 } else {
                     Toast.makeText(
                         baseContext, "Authentication failed.",

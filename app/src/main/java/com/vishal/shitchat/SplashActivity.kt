@@ -6,6 +6,7 @@ import android.os.Handler
 import android.os.Looper
 import android.view.animation.AnimationUtils
 import androidx.appcompat.app.AppCompatActivity
+import com.google.firebase.auth.FirebaseAuth
 import kotlinx.android.synthetic.main.activity_splash.*
 
 class SplashActivity : AppCompatActivity() {
@@ -21,12 +22,23 @@ class SplashActivity : AppCompatActivity() {
         val logoAnimation = AnimationUtils.loadAnimation(this, R.anim.slide_up)
         imgAppLogo.startAnimation(logoAnimation)
 
-        Handler(Looper.getMainLooper()).postDelayed(
-            {
+        //check existing sign in user
+        val currentUser = FirebaseAuth.getInstance().currentUser
+
+        val runnable = {
+            if (currentUser != null) {
+                val i = Intent(this, MainActivity::class.java)
+                startActivity(i)
+                finish()
+            }else{
                 val i = Intent(this, LoginActivity::class.java)
                 startActivity(i)
                 finish()
-            }, 1000
+            }
+        }
+
+        Handler(Looper.getMainLooper()).postDelayed(
+            runnable, 1000
         )
 
     }

@@ -12,7 +12,7 @@ import com.vishal.shitchat.models.Message
 import kotlinx.android.synthetic.main.receiver_chat.view.*
 import kotlinx.android.synthetic.main.sender_chat.view.*
 
-class MessageAdapter(val context: Context, val messageList: List<Message>) :
+class MessageAdapter(val context: Context, private val messageList: List<Message>) :
     RecyclerView.Adapter<RecyclerView.ViewHolder>() {
 
     private var isSender = 1 // 1 -> true
