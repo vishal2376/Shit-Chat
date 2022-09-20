@@ -2,7 +2,6 @@ package com.vishal.shitchat
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
@@ -25,7 +24,11 @@ class LoginActivity : AppCompatActivity() {
             val password = etPasswordLA.text.toString()
 
             //login with email and password
-            login(email, password)
+            if (email.isNotEmpty() && password.isNotEmpty()) {
+                login(email, password)
+            }else{
+                Toast.makeText(this,"Please enter your details",Toast.LENGTH_LONG).show()
+            }
 
         }
 
@@ -46,12 +49,15 @@ class LoginActivity : AppCompatActivity() {
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
-                   val i = Intent(this, MainActivity::class.java)
+
+                    Toast.makeText(this, "Logging In", Toast.LENGTH_SHORT).show()
+
+                    val i = Intent(this, MainActivity::class.java)
                     startActivity(i)
                     finish()
                 } else {
                     Toast.makeText(
-                        baseContext, "User not found",
+                        baseContext, "Email and password is not correct",
                         Toast.LENGTH_SHORT
                     ).show()
                 }

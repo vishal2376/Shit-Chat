@@ -30,7 +30,13 @@ class SignUpActivity : AppCompatActivity() {
             val password = etPasswordSA.text.toString()
 
             //login with email and password
-            signUp(name, email, password)
+            if (name.isNotEmpty() && email.isNotEmpty() && password.isNotEmpty()) {
+                signUp(name, email, password)
+            } else {
+                Toast.makeText(this, "Please enter your details", Toast.LENGTH_LONG)
+                    .show()
+            }
+
         }
 
         //login page button
@@ -49,13 +55,15 @@ class SignUpActivity : AppCompatActivity() {
                     //add user to chat database
                     addUserToDatabase(auth.uid!!, name, email)
 
+                    Toast.makeText(this, "Account created", Toast.LENGTH_SHORT).show()
+
                     //move to chat room
                     val i = Intent(this, MainActivity::class.java)
                     startActivity(i)
                     finish()
                 } else {
                     Toast.makeText(
-                        baseContext, "Authentication failed.",
+                        baseContext, "Something went wrong",
                         Toast.LENGTH_SHORT
                     ).show()
                 }
